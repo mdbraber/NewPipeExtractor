@@ -148,9 +148,6 @@ public final class YoutubeStreamHelper {
 
         final String url = YOUTUBEI_V1_URL + PLAYER + "?" + DISABLE_PRETTY_PRINT_PARAMETER;
 
-        System.out.print(getValidJsonResponseBody(getDownloader().postWithContentTypeJson(
-                        url, getYouTubeHeaders(), body, localization)));
-        
         return JsonUtils.toJsonObject(getValidJsonResponseBody(
                 getDownloader().postWithContentTypeJson(
                         url, getYouTubeHeaders(), body, localization)));
